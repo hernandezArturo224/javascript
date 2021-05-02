@@ -4,12 +4,28 @@
 	<meta charset="utf-8">
 	<title>El título de la página</title>
 	<script src="scripts.js"></script>
+	<script src="jquery.js"></script>
 </head>
 <body>
 
 
-	<input type="text" id="texto"></input>
-	<input type="button" name="btn1" value="Escribe al reves" onclick="escribeAlReves()"></input>
+	<input type="text" name="texto" id="texto"></input>
+	<input type="button" id="btn" name="btn1" value="Escribe al reves"></input>
+
+	<script>
+		$('#btn').on("click",escribeReves);
+
+		function escribeReves(){
+			var cadena = $('input:text[name="texto"]').val();
+			var resultado="";
+			for(var i=cadena.length-1; i>=0 ;i--){
+				resultado = resultado+cadena.charAt(i);
+			}
+
+			alert(resultado);
+		}
+		
+	</script>
 
 </body>
 </html>

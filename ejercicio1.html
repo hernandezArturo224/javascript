@@ -4,10 +4,20 @@
 	<meta charset="utf-8">
 	<title>El título de la página</title>
 	<script src="scripts.js"></script>
+	<script src="jquery.js"></script>
 </head>
 <body>
 
-	<input type="button" name="btnPares" value="Comprueba Par" onclick="muestraPar()"></input>
+	<input id="comprobar" type="button" name="btnPares" value="Comprueba Par"></input>
+
+	<script>
+		$("document").ready(function(){
+			muestraPar();
+		});
+
+		$("#comprobar").on("click", muestraPar);
+
+	</script>
 
 </body>
 </html>

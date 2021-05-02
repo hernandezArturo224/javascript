@@ -4,14 +4,37 @@
 	<meta charset="utf-8">
 	<title>El título de la página</title>
 	<script src="scripts.js"></script>
+	<script src="jquery.js"></script>
 </head>
 <body>
 
 
 	<h3 id="texto"></h3>
-	<input type="button" name="btn1" value="Boton 1" onclick="botonUno()"></input>
-	<input type="button" name="btn2" value="Boton 2" onclick="botonDos()"></input>
-	<input type="button" name="btn3" value="Boton 3" onclick="botonTres()"></input>
+	<input type="button" name="btn1" value="Boton 1" ></input>
+	<input type="button" name="btn2" value="Boton 2" ></input>
+	<input type="button" name="btn3" value="Boton 3" ></input>
+
+	<script>
+		$("input[name='btn1']").on("click",boton1);
+
+		$("input[name='btn2']").on("click",boton2);
+
+		$("input[name='btn3']").on("click",boton3);
+
+		function boton1(){
+			$("#texto").html("Boton 1 clickado...");
+		}
+
+		function boton2(){
+			$("#texto").html("Boton 2 clickado...");
+		}
+
+		function boton3(){
+			$("#texto").html("Boton 3 clickado...");
+		}
+		
+
+	</script>
 
 </body>
 </html>

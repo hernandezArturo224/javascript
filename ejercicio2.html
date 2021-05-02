@@ -4,10 +4,19 @@
 	<meta charset="utf-8">
 	<title>El título de la página</title>
 	<script src="scripts.js"></script>
+	<script src="jquery.js"></script>
 </head>
 <body>
 
-	<input type="button" name="btnPalindromo" value="Comprueba Palindromo" onclick="esPalindromo()"></input>
+	<input type="button" name="btnPalindromo" value="Comprueba Palindromo"></input>
+
+	<script>
+		$("document").ready(function(){
+			esPalindromo();
+		});
+
+		$("input[name='btnPalindromo']").on("click", esPalindromo);
+	</script>
 
 </body>
 </html>
